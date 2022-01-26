@@ -1,0 +1,137 @@
+<%# Hero %>
+<div class='relative hero bg-black w-full flex h-screen flex-col justify-center items-center text-white px-40 py-20'>
+  <div class="w-full flex">
+    <div class="border-b-4 border-white flex-grow my-auto mr-10"></div>
+    <h1 class='text-8xl uppercase font-semibold w-max'>Marcus Thorne</h1>
+    <div class="border-b-4 border-white flex-grow my-auto ml-10"></div>
+  </div>
+
+  <p class="text-3xl uppercase mt-5">Web Developer</p>
+
+  <div class="flex text-2xl space-x-4 mt-10">
+    <div class="border rounded w-12 h-12 border-white flex items-center justify-center transform hover:scale-110 transition duration-500"><i class="fab fa-github"></i></div>
+    <div class="border rounded w-12 h-12 border-white flex items-center justify-center transform hover:scale-110 transition duration-500"><i class="fab fa-linkedin-in"></i></div>
+  </div>
+
+  <h1 class="text-xl mt-20 text-white border border-white px-10 py-2 uppercase transform hover:scale-110 transition duration-500 rounded">Portfolio</h1>
+
+  <%= image_tag("white-arrow-down.png", class: "absolute right-20 bottom-20 w-32 opacity-70 transition duration-500 transform hover:scale-125") %>
+</div>
+
+<%# Navbar %>
+<div class="bg-blue-400 w-full sticky top-0 flex justify-center space-x-10 text-gray-200 shadow z-50 relative">
+  <p class="pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white">About</p>
+  <p class="pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white">Projects</p>
+  <p class="pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white">Experience</p>
+  <p class="pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white">Contact</p>
+
+  <div class="flex absolute right-10 text-gray-800 text-2xl space-x-5 top-6">
+    <div class="flex items-center justify-center transform hover:scale-110 transition duration-500"><i class="fab fa-github"></i></div>
+    <div class="flex items-center justify-center transform hover:scale-110 transition duration-500"><i class="fab fa-linkedin-in"></i></div>
+  </div>
+</div>
+
+<%# About me %>
+<div class="flex justify-center px-40 m-20 border-b border-gray-200 pb-20">
+  <%= image_tag("marcus.jpg", class: "ml-auto w-80 mt-auto rounded shadow-xl") %>
+
+  <div class="mt-10 ml-20">
+    <h1 class="text-4xl w-full flex justify-center mb-10 text-blue-400">About Me</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi explicabo libero obcaecati accusamus vero rerum vitae modi quidem eligendi aspernatur suscipit et nesciunt, culpa illum sunt, tenetur consectetur necessitatibus autem.</p>
+    <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi explicabo libero obcaecati accusamus vero rerum vitae modi quidem eligendi aspernatur suscipit et nesciunt, culpa illum sunt, tenetur consectetur necessitatibus autem.</p>
+
+    <div class="flex space-x-5 mt-10">
+      <p class="border border-gray-300 px-10 py-2 uppercase w-max rounded shadow-md hover:bg-gray-900 hover:text-white transition duration-300">Contact Me</p>
+      <p class="border border-gray-300 px-10 py-2 uppercase w-max rounded shadow-md hover:bg-gray-900 hover:text-white transition duration-300">See Portfolio</p>
+    </div>
+  </div>
+</div>
+
+<%# Projects %>
+<div class="mt-20 w-full flex flex-col justify-center px-20">
+  <div class="px-20 mb-10">
+    <h1 class="text-4xl text-gray-600">Projects</h1>
+
+    <div class="w-full flex justify-between">
+      <div class="flex space-x-2 mt-10">
+        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300">React</p>
+        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300">Rails</p>
+        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300">Tailwind</p>
+        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300">Javascript</p>
+        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300">Postgresql</p>
+        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300">Slick Carousel</p>
+        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300">Parralax</p>
+      </div>
+
+      <div class="flex text-gray-600">
+        <p class="prev mt-auto rounded-l border border-gray-300 px-10 py-2 uppercase w-max shadow-md transform transition hover:scale-105 duration-300 mr-2" style="height: max-content;">Previous</p>
+        <p class="next mt-auto rounded-r border border-gray-300 px-10 py-2 uppercase w-max shadow-md transform transition hover:scale-105 duration-300" style="height: max-content;">Next</p>
+      </div>
+    </div>
+  </div>
+
+  <%# Carousel %>
+  <div id="carousel" class="w-full overflow-hidden mt-5">
+    <% 10.times do %>
+      <div class="rounded my-10 border-2 border-gray-100 mx-3 p-2">
+        <%= image_tag("54-homepage.png", class: "rounded-t") %>
+        <h1 class="mt-5 text-xl mx-3">Title</h1>
+        <p class="mb-5 mt-2 mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima est laborum earum, quisquam perferendis ducimus.</p>
+        <div class="flex border border-gray-200 rounded w-full">
+          <div class="w-1/2 border-r border-gray-200 text-center py-2"><i class="fab fa-github"></i> GitHub</div>
+          <div class="w-1/2 text-center py-2"><i class="fab fa-github"></i> Live Site</div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%# Experience and Education %>
+<div class="bg-gray-100 pt-20 pb-20 mt-32">
+  <h1 class="text-center text-4xl mb-16 text-blue-400">Experience</h1>
+
+  <%= 4.times do %>
+    <div class="flex px-40 my-5" style="height: max-content">
+      <p class="mr-40 w-max whitespace-nowrap	">2018 - Present</p>
+
+      <div class="border-l-2 border-blue-400 relative">
+        <p class="absolute -top-6 -left-5 border border-blue-400 rounded-full bg-white w-10 h-10 flex justify-center items-center">H</p>
+
+        <div class="bg-gray-200 opacity-80 px-10 py-5 rounded ml-40">
+          <h1 class="text-xl">Work Place</h1>
+          <h1 class="text-lg mb-10 text-red-600">Title</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet sapiente sed odio nihil reiciendis veritatis, magni cumque. Accusamus a ad dignissimos, illum harum laudantium odio, optio, facere impedit nam sint?</p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+</div>
+
+<%# Check out Github %>
+<div class="bg-black py-32 text-center w-full text-white text-4xl banner">
+  <h1>Want to see more? Check out my</h1>
+  <p class="px-10 py-2 border border-white w-max mx-auto mt-5 text-2xl">GitHub</p>
+</div>
+
+<%# Contact info %>
+<div class="flex flex-col items-center justify-around my-20 space-y-5">
+  <h1 class="text-3xl mb-10 uppercase">Contact</h1>
+  <div class="flex">
+    <div class="rounded-full border border-blue-400 w-14 text-2xl flex justify-center items-center h-14 flex justify-center items-center" ><i class="fas fa-phone-alt"></i></div>
+    <p class="my-auto ml-5">+44 7541152115</p>
+  </div>
+  <div class="flex">
+    <div class="rounded-full border border-blue-400 w-14 text-2xl flex justify-center items-center h-14 flex justify-center items-center" ><i class="fas fa-envelope"></i></div>
+    <p class="my-auto ml-5">marcus.thorne475@gmail.com</p>
+  </div>
+  <div class="flex">
+    <div class="rounded-full border border-blue-400 w-14 text-2xl flex justify-center items-center h-14 flex justify-center items-center" ><i class="fas fa-map-marker-alt"></i></div>
+    <p class="my-auto ml-5">Barnstaple, Devon</p>
+  </div>
+</div>
+
+<%# Socials %>
+<div class="bg-blue-400 py-10 flex justify-center space-x-5 text-white">
+  <div class="border-2 rounded-full text-xl w-12 h-12 border-white flex items-center justify-center transform hover:scale-110 transition duration-500"><i class="fab fa-github"></i></div>
+  <div class="border-2 rounded-full text-xl w-12 h-12 border-white flex items-center justify-center transform hover:scale-110 transition duration-500"><i class="fab fa-linkedin-in"></i></div>
+</div>
