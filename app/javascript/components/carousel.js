@@ -1,32 +1,26 @@
 const carousel = () => {
   $("#carousel").slick({
     centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
+    mobileFirst: true,
+    centerPadding: '10%',
+    slidesToShow: 1,
     autoplay: true,
     arrows: true,
-    focusOnSelected: true,
-    swipe: true,
-    swipeToSlide: true,
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 550,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
+          slidesToShow: 2,
+          centerPadding: '60px'
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 768,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
+          slidesToShow: 3,
+          centerPadding: '60px'
         }
       }
     ]
