@@ -1,20 +1,24 @@
 const navbarUnderline = () => {
   var links = document.querySelectorAll(".link")
-  var active
+  var currentPosition
 
-  if(window.scrollY < 1000) {
-    active = "About"
-  } else if (window.scrollY < 2000) {
-    active = "Projects"
-  } else if (window.scrollY < 3000) {
-    active = "Experience"
+  if ( window.scrollY < 1000 ) {
+    currentPosition = "About"
+  } else if ( window.scrollY < 2000 ) {
+    currentPosition = "Projects"
+  } else if ( window.scrollY < 3300 ) {
+    currentPosition = "Experience"
   } else {
-    active = "Contact"
+    currentPosition = "Contact"
   }
 
-  links.forEach((link) => {
-    if(link.innerText === active) {
-      link.classList.toggle("border-white")
+  links.forEach( (link) => {
+    if ( link.innerText === currentPosition ) {
+      if ( !link.classList.contains("border-white")) {
+        link.classList.toggle("border-white")
+      }
+    } else {
+      link.classList.remove("border-white")
     }
   })
 }

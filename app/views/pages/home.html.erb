@@ -97,21 +97,56 @@
 </div>
 
 <%# Experience and Education %>
+<% work = [
+  {
+    date: "2021 - Present",
+    job: "Web Design and Development",
+    title: "Self Employeed",
+    description: <div>"- Designed websites from scratch using Figma software.
+- Styled and animated components using JavaScript, Html, CSS, Bootstrap and     Tailwind.
+- Used React framework to create static webpages.
+- Created CRUD apps using Ruby on Rails.
+- Implemented plug-in's such as Stripe Payment and Slick Carousel.
+- Practiced using Ruby Gems and React Libraries.
+- Created custom images and graphics using Adobe Photoshop.
+- Uploaded websites to Heroku and Vercel.
+- Enabled database management via Admin page."</div>
+  },
+  {
+    date: "2021 - Present",
+    job: "Groundworker/ Machine Operator",
+    title: "Self Employeed",
+    description: ""
+  },
+  {
+    date: "2012 - 2020",
+    job: "Mark Thorne Groundworks",
+    title: "Groundworker/ Labourer and Machine Operator",
+    description: ""
+  },
+  {
+    date: "2011 - 2012",
+    job: "Jalapeno Peppers",
+    title: "Waiter and Bar Staff",
+    description: ""
+  }
+] %>
+
 <div id="experience" class="bg-gray-100 pt-20 pb-20 mt-20 md:mt-32">
   <% 2.times do %>
     <h1 class="text-center text-4xl mb-16 text-blue-400">Experience</h1>
 
-    <% 2.times do %>
+    <% work.each do |w| %>
       <div class="flex px-5 md:px-10 lg:px-20 my-5" style="height: max-content">
-        <p class="hidden md:flex md:mr-20 lg:mr-40 w-max whitespace-nowrap">2018 - Present</p>
+        <p class="hidden md:flex md:mr-20 lg:mr-40 w-20 whitespace-nowrap"><%= w[:date] %></p>
 
         <div class="border-l-2 border-blue-400 relative">
           <p class="absolute -top-6 -left-5 border border-blue-400 rounded-full bg-white w-10 h-10 flex justify-center items-center"><i class="fas fa-briefcase"></i></p>
 
           <div class="bg-gray-200 opacity-80 px-10 py-5 rounded ml-10 md:ml-20 lg:ml-40">
-            <h1 class="text-xl">Work Place</h1>
-            <h1 class="text-lg mb-10 text-red-600">Title</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet sapiente sed odio nihil reiciendis veritatis, magni cumque. Accusamus a ad dignissimos, illum harum laudantium odio, optio, facere impedit nam sint?</p>
+            <h1 class="text-xl"><%= w[:job] %></h1>
+            <h1 class="text-lg mb-5 text-blue-400"><%= w[:title] %></h1>
+            <p><%= w[:description] %></p>
           </div>
         </div>
       </div>
