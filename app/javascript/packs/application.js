@@ -5,6 +5,7 @@ import "channels"
 import "../application.css"
 import "@fortawesome/fontawesome-free/css/all"
 import { carousel } from "../components/carousel"
+import { navbarUnderline } from "../components/navbarUnderline"
 
 Rails.start()
 Turbolinks.start()
@@ -12,6 +13,10 @@ ActiveStorage.start()
 
 document.addEventListener('turbolinks:load', () => {
   carousel()
+
+  document.addEventListener('scroll', () => {
+    navbarUnderline()
+  })
 })
 
 document.addEventListener("turbolinks:before-cache", function () {
