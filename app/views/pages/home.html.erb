@@ -72,10 +72,10 @@
 
   <%# Carousel %>
   <% websites = [
-    {title: "Unwind", image: "unwind-homepage.png"},
-    {title: "Ilfracombe 54", image: "54-homepage.png"},
-    {title: "CityWide Construction", image: "54-homepage.png"},
-    {title: "The Vase Place", image: "54-homepage.png"},
+    {title: "Unwind", image: "unwind-homepage.png", description: "This site is used for a small Yoga studio, it's capable of allowing users to sign up and book sessions. It also allows the owner to remove, edit and create new sessions, classes and bookings.", website: "#"},
+    {title: "Ilfracombe 54", image: "54-homepage.png", description: "A client wanted a website that would allow their customers to see in depth infomation on their Holiday Apartments as well as activites in the surrounding areas.", website: "#"},
+    {title: "CityWide Construction", image: "54-homepage.png", description: "A one page static webpage that shows users infomation about a construction company. Allows users to see contact infomation and Location.", website: "https://modest-lamarr-215700.netlify.app/"},
+    {title: "The Vase Place", image: "TheVaseLibrary.png", description: "The Vase Place is a e-commerce website created from scratch. It allows users to sign up, create orders, save their details and create safe online purchases using Stripe.", website: "https://the-vase-library.herokuapp.com/},
   ] %>
 
   <div id="carousel" class="w-full overflow-hidden mt-5">
@@ -83,10 +83,10 @@
       <div class="rounded my-10 border-2 border-gray-100 mx-3 p-2">
         <%= image_tag(site[:image], class: "rounded-t") %>
         <h1 class="mt-5 text-xl mx-3"><%= site[:title] %></h1>
-        <p class="mb-5 mt-2 mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima est laborum earum, quisquam perferendis ducimus.</p>
+        <p class="mb-5 mt-2 mx-3"><%= site[:description] %></p>
         <div class="flex border border-gray-200 rounded w-full">
           <div class="w-1/2 border-r border-gray-200 text-center py-2"><i class="fab fa-github"></i> GitHub</div>
-          <div class="w-1/2 text-center py-2"><i class="fab fa-github"></i> Live Site</div>
+          <a href=<%= site[:website] %> class="w-1/2 text-center py-2"><i class="fab fa-github"></i> Live Site</a>
         </div>
       </div>
     <% end %>
