@@ -71,11 +71,18 @@
   </div>
 
   <%# Carousel %>
+  <% websites = [
+    {title: "Unwind", image: "unwind-homepage.png"},
+    {title: "Ilfracombe 54", image: "54-homepage.png"},
+    {title: "CityWide Construction", image: "54-homepage.png"},
+    {title: "The Vase Place", image: "54-homepage.png"},
+  ] %>
+
   <div id="carousel" class="w-full overflow-hidden mt-5">
-    <% 10.times do %>
+    <% websites.each do |site| %>
       <div class="rounded my-10 border-2 border-gray-100 mx-3 p-2">
-        <%= image_tag("54-homepage.png", class: "rounded-t") %>
-        <h1 class="mt-5 text-xl mx-3">Title</h1>
+        <%= image_tag(site[:image], class: "rounded-t") %>
+        <h1 class="mt-5 text-xl mx-3"><%= site[:title] %></h1>
         <p class="mb-5 mt-2 mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima est laborum earum, quisquam perferendis ducimus.</p>
         <div class="flex border border-gray-200 rounded w-full">
           <div class="w-1/2 border-r border-gray-200 text-center py-2"><i class="fab fa-github"></i> GitHub</div>
@@ -88,23 +95,25 @@
 
 <%# Experience and Education %>
 <div class="bg-gray-100 pt-20 pb-20 mt-32">
-  <h1 class="text-center text-4xl mb-16 text-blue-400">Experience</h1>
+  <%= 2.times do %>
+    <h1 class="text-center text-4xl mb-16 text-blue-400">Experience</h1>
 
-  <%= 4.times do %>
-    <div class="flex px-40 my-5" style="height: max-content">
-      <p class="mr-40 w-max whitespace-nowrap	">2018 - Present</p>
+    <%= 2.times do %>
+      <div class="flex px-40 my-5" style="height: max-content">
+        <p class="mr-40 w-max whitespace-nowrap	">2018 - Present</p>
 
-      <div class="border-l-2 border-blue-400 relative">
-        <p class="absolute -top-6 -left-5 border border-blue-400 rounded-full bg-white w-10 h-10 flex justify-center items-center">H</p>
+        <div class="border-l-2 border-blue-400 relative">
+          <p class="absolute -top-6 -left-5 border border-blue-400 rounded-full bg-white w-10 h-10 flex justify-center items-center">H</p>
 
-        <div class="bg-gray-200 opacity-80 px-10 py-5 rounded ml-40">
-          <h1 class="text-xl">Work Place</h1>
-          <h1 class="text-lg mb-10 text-red-600">Title</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet sapiente sed odio nihil reiciendis veritatis, magni cumque. Accusamus a ad dignissimos, illum harum laudantium odio, optio, facere impedit nam sint?</p>
+          <div class="bg-gray-200 opacity-80 px-10 py-5 rounded ml-40">
+            <h1 class="text-xl">Work Place</h1>
+            <h1 class="text-lg mb-10 text-red-600">Title</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet sapiente sed odio nihil reiciendis veritatis, magni cumque. Accusamus a ad dignissimos, illum harum laudantium odio, optio, facere impedit nam sint?</p>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
+  <% end %>
 </div>
 
 <%# Check out Github %>
