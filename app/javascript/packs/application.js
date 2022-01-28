@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-free/css/all"
 import { carousel } from "../components/carousel"
 import { navbarUnderline } from "../components/navbarUnderline"
 import { hamburger } from "../components/hamburger"
+import { removeTopButton } from "../components/removeTopButton"
 
 Rails.start()
 Turbolinks.start()
@@ -18,6 +19,7 @@ document.addEventListener('turbolinks:load', () => {
 
   document.addEventListener('scroll', () => {
     navbarUnderline()
+    removeTopButton()
   })
 })
 

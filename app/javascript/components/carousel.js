@@ -4,6 +4,7 @@ const carousel = () => {
     mobileFirst: true,
     centerPadding: '10%',
     slidesToShow: 1,
+    dots: true,
     autoplay: true,
     arrows: true,
     prevArrow: $('.prev'),
