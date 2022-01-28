@@ -19,7 +19,7 @@
 
 <%# Navbar %>
 <div class="bg-blue-400 w-full sticky top-0 flex md:justify-center space-x-10 text-gray-200 shadow z-50 relative">
-  <%= link_to "./Marcus%20Thorne.pdf", class:"absolute left-10 top-6 text-gray-800 flex justify-center items-center space-x-2" do %>
+  <%= link_to "./Marcus%20Thorne.pdf", class:"hidden md:flex absolute left-10 top-6 text-gray-800 flex justify-center items-center space-x-2" do %>
     <p class="font-semibold">CV</p>
     <i class="fas fa-download"></i>
   <% end %>
@@ -36,11 +36,15 @@
   </div>
 
   <%# Mobile navbar %>
-  <div id="hamburgerMenu" class="link absolute flex flex-col z-40 bg-blue-300 w-1/2 text-center transform transition duration-500 -left-full" style="top: 4.7rem">
+  <div id="hamburgerMenu" class="link absolute flex flex-col rounded-b shadow-xl z-40 px-20 bg-blue-300 w-max text-center transform transition duration-500 -left-full" style="top: 4.7rem; transform: translate(-50%, 0); margin-left: 0 !important;">
     <a href="#about" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent">About</a>
     <a href="#portfolio" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent">Projects</a>
     <a href="#experience" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent">Experience</a>
     <a href="#contact" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent">Contact</a>
+    <%= link_to "./Marcus%20Thorne.pdf", class:"text-gray-700 flex justify-center items-center space-x-2 mb-6 mt-5 border-2 border-gray-800 p-2 w-max mx-auto" do %>
+      <p class="font-semibold">CV</p>
+      <i class="fas fa-download"></i>
+    <% end %>
   </div>
 </div>
 
