@@ -14,12 +14,16 @@
   </div>
 
   <a href="#portfolio" class="text-xl mt-20 text-white border border-white px-10 py-2 uppercase transform hover:scale-110 transition duration-500 rounded">Portfolio</a>
-
   <a href="#about"><%= image_tag("white-arrow-down.png", class: "absolute right-5 md:right-20 bottom-5 md:bottom-20 w-20 md:w-32 opacity-70 transition duration-500 transform hover:scale-125") %></a>
 </div>
 
 <%# Navbar %>
 <div class="bg-blue-400 w-full sticky top-0 flex md:justify-center space-x-10 text-gray-200 shadow z-50 relative">
+  <%= link_to "./Marcus%20Thorne.pdf", class:"absolute left-10 top-6 text-gray-800 flex justify-center items-center space-x-2" do %>
+    <p class="font-semibold">CV</p>
+    <i class="fas fa-download"></i>
+  <% end %>
+
   <a href="#about" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white hidden md:flex">About</a>
   <a href="#portfolio" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white hidden md:flex">Projects</a>
   <a href="#experience" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white hidden md:flex">Experience</a>
@@ -49,7 +53,7 @@
     <p>I am 25 years old from a small town in North Devon called Barnstaple. I attended Petroc College where i obtained a BTEC in Furniture Making, moving forward i took a job in Groundworks but ultimately decided it wasn't going to be a career. Finally finding computer programming at the age of 24, i decided to take a course at Le Wagon... now i'm looking for my first role.</p>
     <p class="mt-5">I truly enjoy web/software development and love to work around the challenges it presents and I am always keen to learn more. I possess a clear, logical mind with a practical approach to problem solving and a drive to see things through to completion. I have a good eye for details and always ensure my work is accurate.</p>
 
-    <div class="flex space-y-2 md:space-y-auto md:space-x-5 mt-10 flex-col md:flex-row">
+    <div class="flex space-y-2 md:space-y-0 md:space-x-5 mt-10 flex-col md:flex-row">
       <a href="#contact" class="border border-gray-300 px-10 py-2 uppercase w-max rounded shadow-md hover:bg-gray-900 hover:text-white transition duration-300">Contact Me</a>
       <a href="#portfolio" class="border border-gray-300 px-10 py-2 uppercase w-max rounded shadow-md hover:bg-gray-900 hover:text-white transition duration-300">See Portfolio</a>
     </div>
@@ -76,8 +80,8 @@
       </div>
 
       <div class="flex text-gray-600 hidden md:flex">
-        <p class="prev mt-auto rounded-l border border-gray-300 px-10 py-2 uppercase w-max shadow-md transform transition hover:scale-105 duration-300 mr-2" style="height: max-content;">Previous</p>
-        <p class="next mt-auto rounded-r border border-gray-300 px-10 py-2 uppercase w-max shadow-md transform transition hover:scale-105 duration-300" style="height: max-content;">Next</p>
+        <p class="prev cursor-pointer mt-auto rounded-l border border-gray-300 px-10 py-2 uppercase w-max shadow-md transform transition hover:scale-105 duration-300 mr-2" style="height: max-content;">Previous</p>
+        <p class="next cursor-pointer mt-auto rounded-r border border-gray-300 px-10 py-2 uppercase w-max shadow-md transform transition hover:scale-105 duration-300" style="height: max-content;">Next</p>
       </div>
     </div>
   </div>
@@ -85,7 +89,7 @@
   <%# Carousel %>
   <div id="carousel" class="w-full overflow-hidden mt-5">
     <% @websites.each do |site| %>
-      <div class="rounded my-10 border-2 border-gray-100 mx-1 md:mx-3 p-2">
+      <div class="rounded my-14 border-2 border-gray-100 mx-1 md:mx-3 p-2 transform duration-300 hover:scale-105 hover:shadow-xl">
         <%= image_tag(site[:image], class: "rounded-t h-52 object-cover") %>
         <h1 class="mt-5 text-xl mx-3"><%= site[:title] %></h1>
         <p class="mb-5 mt-2 mx-3 text-gray-600"><%= site[:description] %></p>
@@ -130,7 +134,7 @@
 
 <%# Check out Github %>
 <div class="bg-black py-32 px-5 text-center w-full text-white text-4xl banner">
-  <h1>Want to see more? Check out my</h1>
+  <h1 class="mb-5">Want to see more? Check out my</h1>
   <a href="https://github.com/MarcusThorne" class="px-10 py-2 border border-white w-max mx-auto mt-5 text-2xl">GitHub</a>
 </div>
 
