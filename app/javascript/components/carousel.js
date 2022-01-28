@@ -17,7 +17,7 @@ const carousel = () => {
         }
       },
       {
-        breakpoint: 768,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 3,
           centerPadding: '60px'

@@ -6,6 +6,7 @@ import "../application.css"
 import "@fortawesome/fontawesome-free/css/all"
 import { carousel } from "../components/carousel"
 import { navbarUnderline } from "../components/navbarUnderline"
+import { hamburger } from "../components/hamburger"
 
 Rails.start()
 Turbolinks.start()
@@ -13,6 +14,7 @@ ActiveStorage.start()
 
 document.addEventListener('turbolinks:load', () => {
   carousel()
+  hamburger()
 
   document.addEventListener('scroll', () => {
     navbarUnderline()
