@@ -79,6 +79,9 @@ class PagesController < ApplicationController
       {
         title: 'The Vase Place', image: 'TheVaseLibrary.png', description: 'The Vase Place is a e-commerce website created from scratch. It allows users to sign up, create orders, save their details and create safe online purchases using Stripe.', githubLink: 'https://github.com/MarcusThorne/the-vase-place', github: true, website: 'https://the-vase-library.herokuapp.com/'
       },
+      {
+        title: 'Quote Calculator', image: 'quote-calculator.png', description: 'Quote calculator is an online application that allows you to accurately calculate the sum total of materials, labour and taxes cost for Groundworks jobs.', githubLink: 'https://github.com/MarcusThorne/quote-calculator', github: true, website: 'https://quote-calculator.vercel.app/'
+      },
     ]
 
     @title = "Experience"
