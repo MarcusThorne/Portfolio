@@ -5,7 +5,7 @@ Project.create([
   {
     title: 'Unwind',
     image: 'unwind-homepage.png',
-    description: "This site is used for a small Yoga studio, it's capable of allowing users to sign up and book sessions.
+    description: "This site is for a small Yoga studio. Its capability allows users to sign up and book sessions.
     It also allows the owner to remove, edit and create new sessions, classes and bookings.",
     githubLink: 'https://github.com/MarcusThorne/unwind-yoga',
     onGithub: true,
@@ -14,8 +14,8 @@ Project.create([
   {
     title: 'Ilfracombe 54',
     image: '54-homepage.png',
-    description: 'A client wanted a website that would allow their customers to see in depth infomation on their
-    Holiday Apartments as well as activites in the surrounding areas.',
+    description: 'A client wanted a website that would allow their customers to see in-depth information on their
+    Holiday Apartments as well as activities in the surrounding areas.',
     githubLink: 'github.com',
     onGithub: false,
     websiteLink: 'https://ilfracombe54.co.uk'
@@ -23,8 +23,8 @@ Project.create([
   {
     title: 'CityWide Construction',
     image: 'CityWide Construction.png',
-    description: 'A one page static webpage that shows users infomation about a construction company.
-    Allows users to see contact infomation and Location.',
+    description: 'CityWide Construction is a one-page HTML webpage that shows users information about a construction company.
+    Allows users to see contact information and Location.',
     githubLink: 'https://github.com/MarcusThorne/citywide-construction',
     onGithub: true,
     websiteLink: 'https://modest-lamarr-215700.netlify.app/'
@@ -32,7 +32,7 @@ Project.create([
   {
     title: 'The Vase Place',
     image: 'TheVaseLibrary.png',
-    description: 'The Vase Place is a e-commerce website created from scratch.
+    description: 'Vase Place is an e-commerce website created from scratch.
     It allows users to sign up, create orders, save their details and create safe online purchases using Stripe.',
     githubLink: 'https://github.com/MarcusThorne/the-vase-place',
     onGithub: true,
@@ -41,8 +41,7 @@ Project.create([
   {
     title: 'Quote Calculator',
     image: 'quote-calculator.png',
-    description: 'Quote calculator is an online application that allows you to accurately calculate the sum
-    total of materials, labour and taxes cost for Groundworks jobs.',
+    description: 'Quote calculator is an online application that allows you to calculate the total material costs, labour and tax cost for Groundworks jobs.',
     githubLink: 'https://github.com/MarcusThorne/quote-calculator',
     onGithub: true,
     websiteLink: 'https://quote-calculator.vercel.app/'
@@ -58,7 +57,7 @@ Resume.create([
       - Styled and animated components using JavaScript, Html, CSS, Bootstrap and Tailwind.
       - Used React framework to create static webpages.
       - Created CRUD apps using Ruby on Rails.
-      - Implemented plug-in's such as Stripe Payment and Slick Carousel.
+      - Implemented plug-ins such as Stripe Payment and Slick Carousel.
       - Practiced using Ruby Gems and React Libraries.
       - Created custom images and graphics using Adobe Photoshop.
       - Uploaded websites to Heroku and Vercel.
@@ -69,23 +68,23 @@ Resume.create([
     date: '2021 - Present',
     job: 'Groundworker/ Machine Operator',
     title: 'Self Employeed',
-    description: '- Laid concrete foundations and finishing groundworks, used concrete to lay road curbs and garden curbs.
-    - Designed and constructed garden landscaping and removed excess rubble from demolition.
+    description: '- Laid concrete foundations and finishing groundwork, used concrete to lay road curbs and garden curbs.
+    - Designed and constructed garden landscapes, and removed excess rubble from demolition.
     - Dug trenches and laid drainage, as well as drainage maintenance and repair.
-    - Licenced heavy machine operator for machines such as 350° Excavator, Ride on roller and Dumpers.
-    - Worked closely with colleagues to provide a safe and efficient work space.
+    - Licenced heavy machine operator for machines such as 350° Excavator, Ride-on roller and Dumpers.
+    - Worked closely with colleagues to provide a safe and efficient workspace.
     - Trained in lifting operations with all types of 360° Excavator.',
     education: false
   },
   {
     date: '2012 - 2020',
     job: 'Mark Thorne Groundworks',
-    title: 'Groundworker/ Labourer and Machine Operator',
-    description: '- Laid concrete foundations and finishing groundworks, used concrete to lay road curbs and garden curbs.
-    - Designed and constructed garden landscaping and removed excess rubble from demolition.
+    title: 'Groundworker and Machine Operator',
+    description: '- Laid concrete foundations and finishing groundwork, used concrete to lay road curbs and garden curbs.
+    - Designed and constructed garden landscapes, and removed excess rubble from demolition.
     - Dug trenches and laid drainage, as well as drainage maintenance and repair.
-    - Licenced heavy machine operator for machines such as 350° Excavator, Ride on roller and Dumpers.
-    - Worked closely with colleagues to provide a safe and efficient work space.
+    - Licenced heavy machine operator for machines such as 350° Excavator, Ride-on roller and Dumpers.
+    - Worked closely with colleagues to provide a safe and efficient workspace.
     - Trained in lifting operations with all types of 360° Excavator.',
     education: false
   },
@@ -101,10 +100,10 @@ Resume.create([
     job: 'Le Wagon',
     title: '9-weeks Intensive Coding Bootcamp',
     description: "- Learned how to use HTML, CSS, SCSS, Bootstrap, JavaScript ES6 and Ruby on Rails.
-    - Regularly uploaded to GitHub, and websites were deployed to Heroku.
+    - Regularly uploaded to GitHub, and websites deployed to Heroku.
     - Familiarised with Slack, Zoom, Visual Studio, Windows Terminal and Figma.
     - Collaborated ideas with others and translated them to the screen together.
-    - Used Adobe photoshop to create Logo's for our project's.",
+    - Used Adobe Photoshop to create Logo's for our project's.",
     education: true
   },
   {
@@ -115,7 +114,7 @@ Resume.create([
     - Designed and crafted a table and chairs, a wall cabinet and restored an old gramophone.
     - Attended monthly meetings as a student rep for the carpentry department.
 
-    - Successful in the following modules...
+    - Successful in the following modules
     - Level 2 Sustainability in the timber trade
     - Level 2 Technical drawing and workshop geometry
     - Level 3 Assemble furniture components
