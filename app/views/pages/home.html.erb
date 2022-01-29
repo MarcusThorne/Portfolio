@@ -67,13 +67,10 @@
 <%# Projects %>
 <div class="mt-20 w-full flex flex-col justify-center lg:px-20" id="projects">
   <div class="px-5 md:px-20 mb-10">
-    <h1 class="text-4xl text-gray-600">Projects</h1>
-
     <div class="w-full flex justify-between">
-      <div class="flex flex-wrap mt-10 max-w-4xl">
-        <% @projectCategories.each do |project| %>
-          <p class="<%= @projectClasses %>"><%= project %></p>
-        <% end %>
+      <div class="flex flex-col ml-5">
+        <h1 class="text-4xl text-gray-600 mb-1">Projects</h1>
+        <p class="text-gray-500">Check out my personal projects</p>
       </div>
 
       <div class="flex text-gray-600 hidden md:flex">
@@ -85,16 +82,23 @@
 
   <%# Carousel %>
   <div id="carousel" class="w-full overflow-hidden mt-0">
-    <% @projects.each do |site| %>
-      <div class="rounded my-14 border-2 border-gray-100 mx-1 md:mx-3 p-2 transform duration-300 hover:scale-105 active:scale-105 hover:shadow-xl">
-        <%= image_tag(site[:image], class: "rounded-t h-52 object-cover") %>
-        <h1 class="mt-5 text-xl mx-3 text-blue-500"><%= site[:title] %></h1>
-        <p class="mb-5 mt-2 mx-3 text-gray-600"><%= site[:description] %></p>
-        <div class="flex justify-center border border-gray-200 rounded w-full">
-          <% if site[:onGithub] %>
-            <a href=<%= site[:githubLink] %> class="w-1/2 border-r border-gray-200 text-center py-2 hover:bg-blue-300 hover:text-white transform duration-300"><i class="fab fa-github"></i> GitHub</a>
+    <% @projects.each_with_index do |project, index| %>
+      <div id="project<%= index %>" class="rounded relative my-14 border-2 border-gray-100 mx-1 md:mx-3 p-2 transform duration-300 hover:scale-105 active:scale-105 hover:shadow-xl">
+        <div id="feature<%= index %>" class="md:absolute flex flex-wrap md:w-60 p-5 md:-left-60 tranform transition duration-300 hidden -top-0 rounded md:border border-gray-200 shadow-xl" style="background-color: rgba(240,240,240,0.8)">
+          <h1>Included Features</h1>
+          <% project[:languages].gsub(/\W/, ' ').split(" ").each do |language| %>
+            <p class="<%= @projectClasses %>"><%= language %></p>
           <% end %>
-          <a id="resume" href=<%= site[:websiteLink] %> class="<%= site[:onGithub] ? "w-1/2" : "w-full" %> text-center py-2 hover:bg-blue-300 hover:text-white transform duration-300"><i class="far fa-eye"></i> Live Site</a>
+        </div>
+
+        <%= image_tag(project[:image], class: "rounded-t h-52 object-cover") %>
+        <h1 class="mt-5 text-xl mx-3 text-blue-500"><%= project[:title] %></h1>
+        <p class="mb-5 mt-2 mx-3 text-gray-600"><%= project[:description] %></p>
+        <div class="flex justify-center border border-gray-200 rounded w-full">
+          <% if project[:onGithub] %>
+            <a href=<%= project[:githubLink] %> class="w-1/2 border-r border-gray-200 text-center py-2 hover:bg-blue-300 hover:text-white transform duration-300"><i class="fab fa-github"></i> GitHub</a>
+          <% end %>
+          <a id="resume" href=<%= project[:websiteLink] %> class="<%= project[:onGithub] ? "w-1/2" : "w-full" %> text-center py-2 hover:bg-blue-300 hover:text-white transform duration-300"><i class="far fa-eye"></i> Live Site</a>
         </div>
       </div>
     <% end %>
@@ -108,7 +112,7 @@
 
     <% @resumes.each do |w| %>
       <% if w[:education] == @activeEducation %>
-        <div class="flex pl-8 pr-5 md:px-10 lg:px-20 my-5" style="height: max-content">
+        <div class="flex pl-8 pr-5 md:px-10 lg:px-20 my-5 relative" style="height: max-content">
           <p class="hidden md:flex md:mr-20 lg:mr-40 w-20 whitespace-nowrap"><%= w[:date] %></p>
 
           <div class="border-l-2 border-blue-400 relative w-full">
@@ -118,7 +122,7 @@
               <h1 class="text-xl"><%= w[:job] %></h1>
               <h1 class="text-lg mb-5 text-blue-400"><%= w[:title] %></h1>
               <% w[:description].split("-").each do |bulletPoint| %>
-                <% if bulletPoint.include?("Successful in the following modules...") %>
+                <% if bulletPoint.include?("Successful in the following modules") %>
                   <p class="text-xs sm:text-base mt-5 mb-2"><%= bulletPoint %></p>
                 <%  elsif bulletPoint.length >= 1 %>
                   <div class="ml-5 flex items-center text-gray-700">
@@ -138,9 +142,9 @@
 </div>
 
 <%# Check out Github %>
-<div class="bg-black py-32 px-5 text-center w-full text-white text-4xl banner">
+<div class="bg-black py-32 px-5 text-center w-full text-white text-4xl banner ">
   <h1 class="mb-5">Want to see more? Check out my</h1>
-  <a href="https://github.com/MarcusThorne" class="px-10 py-2 border border-white w-max mx-auto mt-5 text-2xl hover:scale-105 transform transition duration-300">GitHub</a>
+  <a href="https://github.com/MarcusThorne" class="hover:bg-white hover:text-gray-800 hover:shadow-xl rounded transition duration-300 px-10 py-2 border border-white w-max mx-auto mt-5 text-2xl">GitHub</a>
 </div>
 
 <%# Contact info %>
@@ -164,5 +168,5 @@
 <div class="bg-blue-400 py-10 flex justify-center space-x-5 text-white">
   <a href="https://github.com/MarcusThorne" class="border-2 rounded-full text-xl w-12 h-12 border-white flex items-center justify-center transform hover:scale-110 transition duration-500"><i class="fab fa-github"></i></a>
   <a href="https://www.linkedin.com/in/marcus-thorne-a046541b4/" class="border-2 rounded-full text-xl w-12 h-12 border-white flex items-center justify-center transform hover:scale-110 transition duration-500"><i class="fab fa-linkedin-in"></i></a>
-  <a href="#hero" id="backToTop" class="hidden fixed z-50 right-5 bottom-5 rounded bg-white opacity-90 shadow-xl p-2 text-gray-800 h-8 w-8 flex items-center justify-center text-xl transform duration-300 transition hover:scale-105"><i class="fas fa-chevron-up"></i></a>
+  <a href="#hero" id="backToTop" class="hidden fixed z-50 right-5 bottom-5 rounded bg-white opacity-90 shadow-xl p-2 text-gray-800 h-8 w-8 flex items-center justify-center text-xl"><i class="fas fa-chevron-up transform duration-300 transition hover:scale-110"></i></a>
 </div>

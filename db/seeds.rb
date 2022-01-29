@@ -9,7 +9,8 @@ Project.create([
     It also allows the owner to remove, edit and create new sessions, classes and bookings.",
     githubLink: 'https://github.com/MarcusThorne/unwind-yoga',
     onGithub: true,
-    websiteLink: 'https://unwind-yoga.herokuapp.com/'
+    websiteLink: 'https://unwind-yoga.herokuapp.com/',
+    languages: ["HTML", "Ruby", "Rails", "Tailwind", "JavaScript", "SCSS", "PostgreSQL", "Slick Carousel", "Stripe"]
   },
   {
     title: 'Ilfracombe 54',
@@ -18,7 +19,8 @@ Project.create([
     Holiday Apartments as well as activities in the surrounding areas.',
     githubLink: 'github.com',
     onGithub: false,
-    websiteLink: 'https://ilfracombe54.co.uk'
+    websiteLink: 'https://ilfracombe54.co.uk',
+    languages: ["HTML", "React", "Styled Components", "JavaScript", "SCSS", "PostgreSQL", "Slick Carousel", "Parallax"]
   },
   {
     title: 'CityWide Construction',
@@ -27,7 +29,8 @@ Project.create([
     Allows users to see contact information and Location.',
     githubLink: 'https://github.com/MarcusThorne/citywide-construction',
     onGithub: true,
-    websiteLink: 'https://modest-lamarr-215700.netlify.app/'
+    websiteLink: 'https://modest-lamarr-215700.netlify.app/',
+    languages: ["HTML", "JavaScript", "SCSS"]
   },
   {
     title: 'The Vase Place',
@@ -36,7 +39,8 @@ Project.create([
     It allows users to sign up, create orders, save their details and create safe online purchases using Stripe.',
     githubLink: 'https://github.com/MarcusThorne/the-vase-place',
     onGithub: true,
-    websiteLink: 'https://the-vase-library.herokuapp.com/'
+    websiteLink: 'https://the-vase-library.herokuapp.com/',
+    languages: ["HTML", "Ruby", "Rails", "Tailwind", "JavaScript", "SCSS", "PostgreSQL", "Slick Carousel", "Stripe"]
   },
   {
     title: 'Quote Calculator',
@@ -44,7 +48,8 @@ Project.create([
     description: 'Quote calculator is an online application that allows you to calculate the total material costs, labour and tax cost for Groundworks jobs.',
     githubLink: 'https://github.com/MarcusThorne/quote-calculator',
     onGithub: true,
-    websiteLink: 'https://quote-calculator.vercel.app/'
+    websiteLink: 'https://quote-calculator.vercel.app/',
+    languages: ["HTML", "React", "Styled Components", "JavaScript", "SCSS"]
   },
 ])
 

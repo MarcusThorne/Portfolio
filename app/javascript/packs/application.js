@@ -8,6 +8,7 @@ import { carousel } from "../components/carousel"
 import { navbarUnderline } from "../components/navbarUnderline"
 import { hamburger } from "../components/hamburger"
 import { removeTopButton } from "../components/removeTopButton"
+import { projectFeatures } from "../components/projectFeatures"
 
 Rails.start()
 Turbolinks.start()
@@ -16,6 +17,7 @@ ActiveStorage.start()
 document.addEventListener('turbolinks:load', () => {
   carousel()
   hamburger()
+  projectFeatures()
 
   document.addEventListener('scroll', () => {
     navbarUnderline()
