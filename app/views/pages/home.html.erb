@@ -92,7 +92,7 @@
               <% if language == "Slick" || language == "Styled" %>
                 <%= language + " " + languages[index + 1] %>
               <% else %>
-                <%= language  %>
+                <%= language unless language == "Carousel" || language == "Components" %>
               <% end %>
             </p>
           <% end %>
