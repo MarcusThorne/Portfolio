@@ -6,6 +6,7 @@ const carousel = () => {
     slidesToShow: 1,
     dots: true,
     autoplay: true,
+    swipeToSlide: true,
     arrows: true,
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
