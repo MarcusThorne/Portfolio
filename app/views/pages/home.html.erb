@@ -128,7 +128,7 @@
             <div class="bg-gray-200 opacity-80 px-5 sm:px-10 py-5 rounded ml-10 md:ml-20 lg:ml-40">
               <h1 class="text-xl"><%= w[:job] %></h1>
               <h1 class="text-lg mb-5 text-blue-400"><%= w[:title] %></h1>
-              <% w[:description].split("-").each do |bulletPoint| %>
+              <% w[:description].split(".").each do |bulletPoint| %>
                 <% if bulletPoint.include?("Successful in the following modules") %>
                   <p class="text-xs sm:text-base mt-5 mb-2"><%= bulletPoint %></p>
                 <%  elsif bulletPoint.length >= 1 %>

@@ -59,26 +59,26 @@ Resume.create([
     job: 'Web Design and Development',
     title: 'Self Employeed',
     description: "- Designed websites from scratch using Figma software.
-      - Styled and animated components using JavaScript, Html, CSS, Bootstrap and Tailwind.
-      - Used React framework to create static webpages.
-      - Created CRUD apps using Ruby on Rails.
-      - Implemented plug-ins such as Stripe Payment and Slick Carousel.
-      - Practiced using Ruby Gems and React Libraries.
-      - Created custom images and graphics using Adobe Photoshop.
-      - Uploaded websites to Heroku and Vercel.
-      - Enabled database management via Admin page.",
+      . Styled and animated components using JavaScript, Html, CSS, Bootstrap and Tailwind.
+      . Used React framework to create static webpages.
+      . Created CRUD apps using Ruby on Rails.
+      . Implemented plug-ins such as Stripe Payment and Slick Carousel.
+      . Practiced using Ruby Gems and React Libraries.
+      . Created custom images and graphics using Adobe Photoshop.
+      . Uploaded websites to Heroku and Vercel.
+      . Enabled database management via Admin page.",
     education: false
   },
   {
     date: '2021 - Present',
     job: 'Groundworker/ Machine Operator',
     title: 'Self Employeed',
-    description: '- Laid concrete foundations and finishing groundwork, used concrete to lay road curbs and garden curbs.
-    - Designed and constructed garden landscapes, and removed excess rubble from demolition.
-    - Dug trenches and laid drainage, as well as drainage maintenance and repair.
-    - Licenced heavy machine operator for machines such as 350° Excavator, Ride-on roller and Dumpers.
-    - Worked closely with colleagues to provide a safe and efficient workspace.
-    - Trained in lifting operations with all types of 360° Excavator.',
+    description: '. Laid concrete foundations and finishing groundwork, used concrete to lay road curbs and garden curbs.
+    . Designed and constructed garden landscapes, and removed excess rubble from demolition.
+    . Dug trenches and laid drainage, as well as drainage maintenance and repair.
+    . Licenced heavy machine operator for machines such as 350° Excavator, Ride-on roller and Dumpers.
+    . Worked closely with colleagues to provide a safe and efficient workspace.
+    . Trained in lifting operations with all types of 360° Excavator.',
     education: false
   },
   {
@@ -99,29 +99,29 @@ Resume.create([
     date: '2021 - 2021',
     job: 'Le Wagon',
     title: '9-weeks Intensive Coding Bootcamp',
-    description: "- Learned how to use HTML, CSS, SCSS, Bootstrap, JavaScript ES6 and Ruby on Rails.
-    - Regularly uploaded to GitHub, and websites deployed to Heroku.
-    - Familiarised with Slack, Zoom, Visual Studio, Windows Terminal and Figma.
-    - Collaborated ideas with others and translated them to the screen together.
-    - Used Adobe Photoshop to create Logo's for our project's.",
+    description: ". Learned how to use HTML, CSS, SCSS, Bootstrap, JavaScript ES6 and Ruby on Rails.
+    . Regularly uploaded to GitHub, and websites deployed to Heroku.
+    . Familiarised with Slack, Zoom, Visual Studio, Windows Terminal and Figma.
+    . Collaborated ideas with others and translated them to the screen together.
+    . Used Adobe Photoshop to create Logo's for our project's.",
     education: true
   },
   {
     date: '2012 - 2015',
     job: 'Petroc College',
     title: 'Level 3 Diploma Furniture Making',
-    description: "- 3 years level 3 diploma in furniture making, learning window fitting, cabinet making and health and safety.
-    - Designed and crafted a table and chairs, a wall cabinet and restored an old gramophone.
-    - Attended monthly meetings as a student rep for the carpentry department.
+    description: ". 3 years level 3 diploma in furniture making, learning window fitting, cabinet making and health and safety.
+    . Designed and crafted a table and chairs, a wall cabinet and restored an old gramophone.
+    . Attended monthly meetings as a student rep for the carpentry department.
 
-    - Successful in the following modules
-    - Level 2 Sustainability in the timber trade
-    - Level 2 Technical drawing and workshop geometry
-    - Level 3 Assemble furniture components
-    - Level 3 Production planning in furniture and furnishing making
-    - Level 3 Prototype design in furniture making
-    - Level 3 Research and product design in furniture making
-    - Level 3 Supervision in a furniture and furnishing making environment",
+    . Successful in the following modules
+    . Level 2 Sustainability in the timber trade
+    . Level 2 Technical drawing and workshop geometry
+    . Level 3 Assemble furniture components
+    . Level 3 Production planning in furniture and furnishing making
+    . Level 3 Prototype design in furniture making
+    . Level 3 Research and product design in furniture making
+    . Level 3 Supervision in a furniture and furnishing making environment",
     education: true
   },
   {
