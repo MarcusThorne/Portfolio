@@ -80,12 +80,7 @@ Resume.create([
     date: '2012 - 2020',
     job: 'Mark Thorne Groundworks',
     title: 'Groundworker and Machine Operator',
-    description: '- Laid concrete foundations and finishing groundwork, used concrete to lay road curbs and garden curbs.
-    - Designed and constructed garden landscapes, and removed excess rubble from demolition.
-    - Dug trenches and laid drainage, as well as drainage maintenance and repair.
-    - Licenced heavy machine operator for machines such as 350° Excavator, Ride-on roller and Dumpers.
-    - Worked closely with colleagues to provide a safe and efficient workspace.
-    - Trained in lifting operations with all types of 360° Excavator.',
+    description: '',
     education: false
   },
   {
