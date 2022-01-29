@@ -35,10 +35,10 @@
   </div>
 
   <%# Mobile navbar %>
-  <div id="hamburgerBackground" class="w-screen h-screen" style="margin-left: 0 !important;">
+  <div id="hamburgerBackground" class="w-screen h-screen hidden" style="margin-left: 0 !important;">
     <div id="hamburgerMenu" class="link absolute flex flex-col rounded-b shadow-xl z-40 px-20 bg-blue-300 w-max text-center transform transition duration-500 -left-full" style="top: 4.5rem; transform: translate(-50%, 0); margin-left: 0 !important;">
       <% @navlinks.each do |link| %>
-        <a href="#<% link.downcase %>" class="link pt-5 pb-6 border-b-4 md:border-b-0 md:border-t-4 transition duration-300 border-transparent"><%= link %></a>
+        <a href="#<%= link.downcase %>" class="link pt-5 pb-6 border-b-4 md:border-b-0 md:border-t-4 transition duration-300 border-transparent"><%= link %></a>
       <% end %>
       <%= link_to "./Marcus%20Thorne.pdf", class:"text-gray-700 rounded flex justify-center items-center space-x-2 mb-6 mt-5 border-2 border-blue-300 hover:border-blue-200 p-2 w-max mx-auto", target: '_blank' do %>
         <p class="font-semibold">CV</p>
@@ -54,7 +54,7 @@
 
   <div class="mt-10 ml-5 md:ml-20">
     <h1 class="text-4xl w-full flex justify-center mb-10 text-blue-400">About Me</h1>
-    <p>I am 25 years old from a small town in North Devon called Barnstaple. I attended Petroc College where i obtained a BTEC in Furniture Making, moving forward i took a job in Groundworks but ultimately decided it wasn't going to be a career. Finally finding computer programming at the age of 24, i decided to take a course at Le Wagon... now i'm looking for my first role.</p>
+    <p>I am 25 years old from a small town in North Devon called Barnstaple. I attended Petroc College where i obtained a Level 3 Diploma in Furniture Making, moving forward i took a job in Groundworks but ultimately decided it wasn't going to be a career. Finally finding computer programming at the age of 24, i decided to take a course at Le Wagon... now i'm looking for my first role.</p>
     <p class="mt-5">I truly enjoy web/software development and love to work around the challenges it presents and I am always keen to learn more. I possess a clear, logical mind with a practical approach to problem solving and a drive to see things through to completion. I have a good eye for details and always ensure my work is accurate.</p>
 
     <div class="flex space-y-2 md:space-y-0 md:space-x-5 mt-10 flex-col md:flex-row">
