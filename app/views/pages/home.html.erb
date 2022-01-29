@@ -19,16 +19,15 @@
 
 <%# Navbar %>
 <div class="bg-blue-400 w-full sticky top-0 flex md:justify-center space-x-10 text-gray-200 shadow z-50 relative">
-  <%= link_to "./Marcus%20Thorne.pdf", class:"hover:scale-105 transform duration-300 border-2 border-gray-700 px-4 py-2 hidden md:flex absolute left-10 top-4 text-gray-800 flex justify-center items-center space-x-2 hover:border-black " do %>
+  <%= link_to "./Marcus%20Thorne.pdf", class:"hover:scale-105 transform rounded duration-300 border-2 border-gray-700 px-4 py-2 hidden md:flex absolute left-10 top-4 text-gray-800 flex justify-center items-center space-x-2 border-blue-300 hover:border-blue-200 " do %>
     <p class="font-semibold">CV</p>
     <i class="fas fa-download"></i>
   <% end %>
 
-  <a href="#about" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white hidden md:flex">About</a>
-  <a href="#portfolio" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white hidden md:flex">Projects</a>
-  <a href="#experience" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white hidden md:flex">Experience</a>
-  <a href="#contact" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white hidden md:flex">Contact</a>
-  <p id="hamburger" class="pt-5 pb-6 border-t-4 transition duration-300 border-transparent hover:border-white md:hidden text-xl"><i class="fas fa-bars"></i></p>
+  <% @navlinks.each do |link| %>
+    <a href="#<%= link.downcase %>" class="<%= @navlinkClasses %>"><%= link %></a>
+  <% end %>
+  <p id="hamburger" class="md:hidden <%= @navlinkClasses %>"><i class="fas fa-bars"></i></p>
 
   <div class="flex absolute right-10 text-gray-800 text-2xl space-x-5 top-6">
     <a href="https://github.com/MarcusThorne" class="flex items-center justify-center transform hover:scale-125 transition duration-500 hover:text-black"><i class="fab fa-github"></i></a>
@@ -37,11 +36,10 @@
 
   <%# Mobile navbar %>
   <div id="hamburgerMenu" class="link absolute flex flex-col rounded-b shadow-xl z-40 px-20 bg-blue-300 w-max text-center transform transition duration-500 -left-full" style="top: 4.7rem; transform: translate(-50%, 0); margin-left: 0 !important;">
-    <a href="#about" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent">About</a>
-    <a href="#portfolio" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent">Projects</a>
-    <a href="#experience" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent">Experience</a>
-    <a href="#contact" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent">Contact</a>
-    <%= link_to "./Marcus%20Thorne.pdf", class:"text-gray-700 flex justify-center items-center space-x-2 mb-6 mt-5 border-2 border-gray-800 p-2 w-max mx-auto", target: '_blank' do %>
+    <% @navlinks.each do |link| %>
+      <a href="#<% link.downcase %>" class="link pt-5 pb-6 border-t-4 transition duration-300 border-transparent"><%= link %></a>
+    <% end %>
+    <%= link_to "./Marcus%20Thorne.pdf", class:"text-gray-700 rounded flex justify-center items-center space-x-2 mb-6 mt-5 border-2 border-blue-300 hover:border-blue-200 p-2 w-max mx-auto", target: '_blank' do %>
       <p class="font-semibold">CV</p>
       <i class="fas fa-download"></i>
     <% end %>
@@ -65,22 +63,15 @@
 </div>
 
 <%# Projects %>
-<div class="mt-20 w-full flex flex-col justify-center lg:px-20" id="portfolio">
+<div class="mt-20 w-full flex flex-col justify-center lg:px-20" id="projects">
   <div class="px-5 md:px-20 mb-10">
     <h1 class="text-4xl text-gray-600">Projects</h1>
 
     <div class="w-full flex justify-between">
       <div class="flex flex-wrap mt-10 max-w-4xl">
-        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300 mr-2 mt-2">React</p>
-        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300 mr-2 mt-2">Styled Components</p>
-        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300 mr-2 mt-2">Rails</p>
-        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300 mr-2 mt-2">Tailwind</p>
-        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300 mr-2 mt-2">JavaScript</p>
-        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300 mr-2 mt-2">PostgreSQL</p>
-        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300 mr-2 mt-2">SQL</p>
-        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300 mr-2 mt-2">Slick Carousel</p>
-        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300 mr-2 mt-2">Parallax</p>
-        <p class="bg-gray-800 text-white rounded px-4 py-1 w-max hover:bg-gray-600 transition duration-300 mr-2 mt-2">Stripe</p>
+        <% @projectCategories.each do |project| %>
+          <p class="<%= @projectClasses %>"><%= project %></p>
+        <% end %>
       </div>
 
       <div class="flex text-gray-600 hidden md:flex">
@@ -93,7 +84,7 @@
   <%# Carousel %>
   <div id="carousel" class="w-full overflow-hidden mt-0">
     <% @websites.each do |site| %>
-      <div class="rounded my-14 border-2 border-gray-100 mx-1 md:mx-3 p-2 transform duration-300 hover:scale-105 hover:shadow-xl">
+      <div class="rounded my-14 border-2 border-gray-100 mx-1 md:mx-3 p-2 transform duration-300 hover:scale-105 active:scale-105 hover:shadow-xl">
         <%= image_tag(site[:image], class: "rounded-t h-52 object-cover") %>
         <h1 class="mt-5 text-xl mx-3 text-blue-500"><%= site[:title] %></h1>
         <p class="mb-5 mt-2 mx-3 text-gray-600"><%= site[:description] %></p>
@@ -101,7 +92,7 @@
           <% if site[:github] %>
             <a href=<%= site[:githubLink] %> class="w-1/2 border-r border-gray-200 text-center py-2 hover:bg-blue-300 hover:text-white transform duration-300"><i class="fab fa-github"></i> GitHub</a>
           <% end %>
-          <a href=<%= site[:website] %> class="<%= site[:github] ? "w-1/2" : "w-full" %> text-center py-2 hover:bg-blue-300 hover:text-white transform duration-300"><i class="far fa-eye"></i> Live Site</a>
+          <a id="resume" href=<%= site[:website] %> class="<%= site[:github] ? "w-1/2" : "w-full" %> text-center py-2 hover:bg-blue-300 hover:text-white transform duration-300"><i class="far fa-eye"></i> Live Site</a>
         </div>
       </div>
     <% end %>
@@ -109,7 +100,7 @@
 </div>
 
 <%# Experience and Education %>
-<div id="experience" class="bg-gray-100 pt-10 pb-20 mt-20 md:mt-32">
+<div class="bg-gray-100 pt-10 pb-20 mt-20 md:mt-32">
   <% 2.times do %>
     <h1 class="text-center text-4xl my-16 text-blue-400"><%= @title %></h1>
 
@@ -124,7 +115,15 @@
             <div class="bg-gray-200 opacity-80 px-5 sm:px-10 py-5 rounded ml-10 md:ml-20 lg:ml-40">
               <h1 class="text-xl"><%= w[:job] %></h1>
               <h1 class="text-lg mb-5 text-blue-400"><%= w[:title] %></h1>
-              <p class="text-xs sm:text-base"><%= w[:description] %></p>
+              <% w[:description].split("-").each do |bulletPoint| %>
+                <% if bulletPoint.include?("Successful in the following modules...") %>
+                  <p class="text-xs sm:text-base mt-5 mb-2"><%= bulletPoint %></p>
+                <%  elsif bulletPoint.length >= 1 %>
+                  <div class="ml-5 flex items-center text-gray-700">
+                    <i class="fas fa-circle mr-5 text-gray-300" style="font-size: 6px;"></i><p class="text-xs sm:text-base"><%= bulletPoint %></p>
+                  </div>
+                <% end %>
+              <% end %>
             </div>
           </div>
         </div>

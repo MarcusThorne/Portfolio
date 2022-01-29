@@ -7,7 +7,7 @@ const navbarUnderline = () => {
   } else if ( window.scrollY < 2000 ) {
     currentPosition = "Projects"
   } else if ( window.scrollY < 3300 ) {
-    currentPosition = "Experience"
+    currentPosition = "Resume"
   } else {
     currentPosition = "Contact"
   }
