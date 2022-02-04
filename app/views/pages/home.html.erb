@@ -85,7 +85,7 @@
     <% @projects.each_with_index do |project, index| %>
       <div id="project<%= index %>" class="rounded relative my-14 border-2 border-gray-100 mx-1 md:mx-3 p-2 transform duration-300 hover:scale-105 active:scale-105 hover:shadow-xl">
         <div id="feature<%= index %>" class="md:absolute flex flex-wrap md:w-60 p-5 md:-left-60 tranform transition duration-300 hidden top-2 rounded md:border border-r-4 border-gray-200 shadow-xl" style="background-color: rgba(240,240,240,0.8)">
-          <h1>Included Features</h1>
+          <h1 class="w-full">Included Features</h1>
           <% languages = project[:languages].gsub(/\W/, ' ').split(" ") %>
           <% languages.each_with_index do |language, index| %>
             <p class="<%= @projectClasses %>">

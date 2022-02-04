@@ -4,11 +4,13 @@ const projectFeatures = () => {
   var project2 = document.querySelector(`#slick-slide02`)
   var project3 = document.querySelector(`#slick-slide03`)
   var project4 = document.querySelector(`#slick-slide04`)
+  var project5 = document.querySelector(`#slick-slide05`)
   var feature0 = document.querySelector(`#feature0`)
   var feature1 = document.querySelector(`#feature1`)
   var feature2 = document.querySelector(`#feature2`)
   var feature3 = document.querySelector(`#feature3`)
   var feature4 = document.querySelector(`#feature4`)
+  var feature5 = document.querySelector(`#feature5`)
 
   project0.addEventListener("mouseover", () => {
     feature0.classList.remove("hidden")
@@ -48,6 +50,14 @@ const projectFeatures = () => {
 
   project4.addEventListener("mouseleave", () => {
     feature4.classList.toggle("hidden")
+  })
+
+  project5.addEventListener("mouseover", () => {
+    feature5.classList.remove("hidden")
+  })
+
+  project5.addEventListener("mouseleave", () => {
+    feature5.classList.toggle("hidden")
   })
 }
 
