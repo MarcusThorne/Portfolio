@@ -51,6 +51,15 @@ Project.create([
     websiteLink: 'https://quote-calculator.vercel.app/',
     languages: ["HTML", "React", "Styled Components", "JavaScript", "SCSS"]
   },
+  {
+    title: 'Smart Calendar',
+    image: 'smart-calendar.png',
+    description: 'Smart Calendar is our group project we created at Le Wagon. It is a calendar that calculates the travel time and adds it to your calendar as well as the event time.',
+    githubLink: 'https://github.com/MarcusThorne/smart-calendar',
+    onGithub: true,
+    websiteLink: 'https://marzsmartcalendar.herokuapp.com/',
+    languages: ["HTML", "Ruby", "Rails", "Bootstrap", "JavaScript", "SCSS"]
+  },
 ])
 
 Resume.create([
