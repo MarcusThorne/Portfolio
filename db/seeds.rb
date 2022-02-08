@@ -55,9 +55,9 @@ Project.create([
     title: 'Marz Studio',
     image: 'marz-studio.png',
     description: 'Marz Studio is a Air Bnb clone we worked on as a team, during my Le Wagon coding bootcamp.',
-    githubLink: 'https://marzstudio.herokuapp.com/',
+    websiteLink: 'https://marzstudio.herokuapp.com/',
     onGithub: true,
-    websiteLink: 'https://github.com/MarcusThorne/marz-studio',
+    githubLink: 'https://github.com/MarcusThorne/marz-studio',
     languages: ["HTML", "Ruby", "Rails", "Bootstrap", "JavaScript", "SCSS", "PostgreSQL"]
   },
   # {
