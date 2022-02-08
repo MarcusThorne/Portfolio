@@ -24,7 +24,14 @@ const carousel = () => {
           slidesToShow: 3,
           centerPadding: '60px'
         }
-      }
+      },
+        {
+            breakpoint: 1560,
+            settings: {
+                slidesToShow: 4,
+                centerPadding: '60px'
+            }
+        }
     ]
   });
 }
