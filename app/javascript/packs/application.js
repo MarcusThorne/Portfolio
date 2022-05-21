@@ -32,3 +32,5 @@ document.addEventListener("turbolinks:before-cache", function () {
     $(item).slick('unslick');
   })
 });
+
+import "stylesheets/application"
