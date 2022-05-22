@@ -52,7 +52,6 @@ Project.create([
     languages: ["HTML", "React", "Styled Components", "JavaScript", "SCSS"]
   },
   {
-<<<<<<< HEAD
     title: 'Edent Limited',
     image: 'edent.png',
     description: 'Edent Limited is a dental technicians labratory in North Devon. The website provides the nessessary information for local Dental Practices.',
@@ -60,8 +59,7 @@ Project.create([
     onGithub: false,
     websiteLink: 'https://www.edent-limited.com',
     languages: ["HTML", "React", "Styled Components", "JavaScript", "CSS"]
-  }
-=======
+  }, {
     title: 'Marz Studio',
     image: 'marz-studio.png',
     description: 'Marz Studio is a Air Bnb clone we worked on as a team, during my Le Wagon coding bootcamp.',
@@ -69,17 +67,7 @@ Project.create([
     onGithub: true,
     githubLink: 'https://github.com/MarcusThorne/marz-studio',
     languages: ["HTML", "Ruby", "Rails", "Bootstrap", "JavaScript", "SCSS", "PostgreSQL"]
-  },
-  # {
-  #   title: 'Smart Calendar',
-  #   image: 'smart-calendar.png',
-  #   description: 'Smart Calendar is our group project we created at Le Wagon. It is a calendar that calculates the travel time and adds it to your calendar as well as the event time.',
-  #   githubLink: 'https://github.com/MarcusThorne/smart-calendar',
-  #   onGithub: true,
-  #   websiteLink: 'https://marzsmartcalendar.herokuapp.com/',
-  #   languages: ["HTML", "Ruby", "Rails", "Bootstrap", "JavaScript", "SCSS"]
-  # },
->>>>>>> 3fb92f6c9941c4b548bf99aa348c971cd5b927cb
+  }
 ])
 
 Resume.create([
